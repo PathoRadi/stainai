@@ -36,7 +36,7 @@ const SignIn = () => {
         localStorage.setItem("STAINAI_USER_PROFILE", JSON.stringify(res.data));
         if (res.data.allow) {
           setUser(res.data);
-          return (window.location = "/stainai");
+          return (window.location = "/");
         } else SetAllow(false);
       })
       .catch((error) => console.log(error));

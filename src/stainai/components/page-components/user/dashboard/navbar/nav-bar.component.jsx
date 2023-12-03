@@ -53,7 +53,7 @@ const NavBar = () => {
     <div className={classes.wrapper} ref={ref}>
       <header className={classes.siteHeader}>
         <div className={classes.compartment}>
-          <img src={logo} className={classes.logo} onClick={() => window.location = '/stainai'} />
+          <img src={logo} className={classes.logo} onClick={() => window.location = '/'} />
         </div>
         <a className={classes.faBars} onClick={menuExpand}>
           <FaBars size={32} />

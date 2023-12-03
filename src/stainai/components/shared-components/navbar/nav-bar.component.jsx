@@ -86,7 +86,7 @@ const NavBar = () => {
           </li>
           {(user.info.firstname || user.info.lastname) && (
               <li>
-                <a href="/stainai" onClick={()=>{
+                <a href="/" onClick={()=>{
                   localStorage.removeItem("STAINAI_USER_PROFILE");
                   setAuthTokens("");
                 }}>Log Out</a>
