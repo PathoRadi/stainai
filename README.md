@@ -1,1 +1,1 @@
-# stainai
+# stainai-permission
