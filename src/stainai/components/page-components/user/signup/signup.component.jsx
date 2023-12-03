@@ -33,7 +33,7 @@ const SignUp = () => {
             your MorStainAI experience.
           </div>
           <div className={classes.button}>
-            <a href="/stainai/user/register">Sign Up</a>
+            <a href="/user/register">Sign Up</a>
           </div>
         </div>
         <SingUpContent

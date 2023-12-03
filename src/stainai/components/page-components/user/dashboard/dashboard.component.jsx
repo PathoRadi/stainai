@@ -70,9 +70,9 @@ const DashBoard = () => {
         <div className={classes.nav}>
           {role === "admin" && (
             <>
-              <a href="/stainai/user/dashboard"> PRPJECT </a>
+              <a href="/user/dashboard"> PRPJECT </a>
               {` | `}
-              <a href="/stainai/user/dashboard/users"> USER </a>
+              <a href="/user/dashboard/users"> USER </a>
             </>
           )}
         </div>

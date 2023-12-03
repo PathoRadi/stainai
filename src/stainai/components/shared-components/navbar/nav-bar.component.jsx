@@ -62,7 +62,7 @@ const NavBar = () => {
             <a href="#">TRY IT</a>
             {isDropdownVisible.tryIt && (
               <div className={classes.dropContent}>
-                <a href="/stainai/upload-image">Upload Your Data</a>
+                <a href="/upload-image">Upload Your Data</a>
                 <a href="http://stainai.howard.edu/webapps/home/session.html?app=Microglia_MorpMap%2FMicroglia_MorpMap">See Your Result</a>
               </div>
             )}
@@ -71,17 +71,17 @@ const NavBar = () => {
             <a href="#">Q&A</a>
           </li>
           <li>
-            <a href="/stainai/contact-us">CONTACT US</a>
+            <a href="/contact-us">CONTACT US</a>
           </li>
           <li className={classes.login}>
             <BsFillPersonFill size={25} />
               {user.info.firstname || user.info.lastname ? (
-                <a href="/stainai/user/dashboard">
+                <a href="/user/dashboard">
                   {" "}
                   {user.info.firstname} {user.info.lastname}{" "}
                 </a>
               ) : (
-                <a href="/stainai/user/signin">SIGNIN</a>
+                <a href="/user/signin">SIGNIN</a>
               )}
           </li>
           {(user.info.firstname || user.info.lastname) && (

@@ -120,7 +120,7 @@ const ResetPasword = () => {
           ) : (
             <div className={classes.error}>
               Your email or toke is invalided. Please go back to{" "}
-              <a href="/stainai/user/signin">sign in</a> page
+              <a href="/user/signin">sign in</a> page
             </div>
           )}
         </div>

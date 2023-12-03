@@ -49,7 +49,7 @@ const SignIn = () => {
       </div>
       <div className={classes.wrapper}>
         <div className={classes.usernav}>
-          <a href="/stainai/user/singup"> Create your Stain.AI ID</a>
+          <a href="/user/singup"> Create your Stain.AI ID</a>
         </div>
         <div className={classes.signin}>
           <div
@@ -110,7 +110,7 @@ const SignIn = () => {
             Remember me
           </div>
           <div className={classes.forget}>
-            <a href="/stainai/user/forget-password">
+            <a href="/user/forget-password">
               Forget Stain.AI ID Password?
             </a>
           </div>

@@ -70,12 +70,12 @@ const NavBar = () => {
             <li className={classes.login}>
               <BsFillPersonFill size={25} />
               {user.info.firstname || user.info.lastname ? (
-                <a href="/stainai/user/dashboard">
+                <a href="/user/dashboard">
                   {" "}
                   {user.info.firstname} {user.info.lastname}{" "}
                 </a>
               ) : (
-                <a href="/stainai/user">SIGNIN</a>
+                <a href="/user">SIGNIN</a>
               )}
             </li>
             {(user.info.firstname || user.info.lastname) && (

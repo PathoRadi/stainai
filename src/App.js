@@ -24,18 +24,16 @@ function App() {
       <Router>
         <UserContext.Provider value={{ user: user, setUser: setUser }}>
           <Routes>
-            <Route exact path="/" element={<Home />} />
-
-            <Route exact path="/stainai" element={<StainAI />} />
-            <Route exact path="/stainai/user/signin" element={<SignIn />} />
-            <Route exact path="/stainai/user/singup" element={<SignUp />} />
-            <Route exact path="/stainai/user/register" element={<Register />} />
-            <Route exact path="/stainai/user/forget-password" element={<ForgetPassword />} />
-            <Route exact path="/stainai/user/reset-password" element={<ResetPasword />} />
-            <Route exact path="/stainai/user/dashboard" element={<DashBoard />} />
-            <Route exact path="/stainai/user/dashboard/users" element={<DashBoardUsers />} />
-            <Route exact path="/stainai/contact-us" element={<ContactUs />} />
-            <Route exact path="/stainai/upload-image" element={<UploadImage />} />
+            <Route exact path="/" element={<StainAI />} />
+            <Route exact path="/user/signin" element={<SignIn />} />
+            <Route exact path="/user/singup" element={<SignUp />} />
+            <Route exact path="/user/register" element={<Register />} />
+            <Route exact path="/user/forget-password" element={<ForgetPassword />} />
+            <Route exact path="/user/reset-password" element={<ResetPasword />} />
+            <Route exact path="/user/dashboard" element={<DashBoard />} />
+            <Route exact path="/user/dashboard/users" element={<DashBoardUsers />} />
+            <Route exact path="/contact-us" element={<ContactUs />} />
+            <Route exact path="/upload-image" element={<UploadImage />} />
 
           </Routes>
         </UserContext.Provider>
