@@ -59,6 +59,5 @@ jobs:
         with:
           app-name: 'stainai'
           slot-name: 'Production'
-          package: .
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_4968BBF9C9E841BB8667CD0DA984C45A }}
           package: release.zip
