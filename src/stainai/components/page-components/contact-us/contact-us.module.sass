@@ -1,0 +1,93 @@
+@mixin header()
+    position: relative
+    background: url("../../../assets/contact_hero.png") center center / cover no-repeat
+    background-size:100% 100%
+    width: 100%
+    height: 550px
+    @media screen and (max-width: 1024px)
+        min-height: 450px
+    @media screen and (max-width: 890px)
+        min-height: 350px
+
+@mixin section()
+    background: url("../../../assets/contact_section.png") center center / cover no-repeat
+    width: 100%
+    min-height: 550px
+
+@mixin contactUs()
+    margin: auto
+    width: 75%
+    display: flex
+    justify-content: center
+    color: #fff
+    @media screen and (max-width: 800px)
+        flex-direction: column
+
+@mixin row()
+    width: 100%
+    display: flex
+    @media screen and (max-width: 800px)
+        flex-direction: column
+
+@mixin title()
+    color: #cda8ed
+    margin: 20px 0
+    font-size: 1.3rem
+    font-weight: bold
+
+@mixin info()
+    flex: 40%
+
+@mixin message()
+    flex: 60%
+    z-index: 999
+    input
+        border-bottom: 1px solid #fff
+        cursor: pointer
+        margin: 10px 0
+    textarea
+        width: 100%
+        border-bottom: 1px solid #fff
+    .inputGroup
+        display: flex
+        flex-direction: column
+        margin: 10px 30px 10px 0
+
+@mixin button()
+    display: flex
+    justify-content: flex-end
+    padding-top: 20px
+    & > input
+        z-index: 10
+        border-radius: 40px
+        border: 0
+        cursor: pointer
+        font-size: 0.9rem
+        font-weight: 600
+        outline: 0
+        text-align: center
+        text-transform: uppercase
+        white-space: nowrap
+        background: #cda8ed
+        padding: 10px 30px
+        color: #fff
+        &:hover
+            background: #d5beea
+
+.wrapper
+    .header
+        @include header()
+    .section
+        @include section()
+        & > .contactUs
+            @include contactUs
+            .row
+                @include row()
+            .title
+                @include title()
+            &>.message
+                @include message()
+                .button
+                    @include button
+            &>.info
+                @include info()

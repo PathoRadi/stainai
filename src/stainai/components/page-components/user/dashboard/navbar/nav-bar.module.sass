@@ -1,0 +1,125 @@
+@mixin siteHeader()
+    background-color: #171b2c
+    color: #fffe
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 20px 5%
+    & > .faBars
+        display: none
+    @media screen and (max-width: 890px)
+        padding-top: 1rem
+        & > .faBars
+            display: block
+            margin-right: 30px
+            cursor: pointer
+            &:hover
+                color: #d4d4d4ee
+
+@mixin compartment()
+    position: relative
+    max-width: 1500px
+    display: flex
+    align-items: center
+    .logo
+        width: 200px
+        cursor: pointer
+    & > h3
+        padding: 1.3rem
+        padding-right: 0
+        color: #fff
+        display: inline-block
+        font-size: 1.8rem
+        font-weight: bold
+        vertical-align: top
+        min-width: 350px
+        line-height: 1.2
+        & > a
+            color: #fff
+            text-decoration: none
+    @media screen and (max-width: 690px)
+        flex-direction: column
+        justify-content: flex-start
+        align-items: flex-start
+        padding-left: 30px
+        & > h3
+            min-width: auto
+            font-size: 1.3rem
+            border-left: 0
+            padding-top: 0
+            padding-left: 0
+            margin-top: 1rem
+
+@mixin nav()
+    display: flex
+    width: 100%
+    justify-content: flex-end
+    align-items: center
+    font-size: 0.9rem
+    & > ul
+        display: flex
+        & > .login
+            display: flex
+            align-items: center
+            // border: 1px solid #ccc
+            border-radius: 30px
+            padding: 0 5px
+        & > li
+            position: relative
+            margin-right: 20px
+            & > a
+                color: #fff
+                font-weight: bold
+                padding: 15px 0px
+                text-transform: uppercase
+                display: inline-block
+                position: relative
+            &:after
+                background: none repeat scroll 0 0 transparent
+                bottom: 0
+                content: ""
+                display: block
+                height: 3px
+                left: 50%
+                position: absolute
+                background: #9de4fc
+                transition: width 0.3s ease 0s, left 0.3s ease 0s
+                width: 0
+            &:hover
+                &:after
+                    width: 100%
+                    left: 0
+    @media screen and (max-width: 890px)
+        display: none
+        flex-direction: column
+        position: absolute
+        border: 1px solid gray
+        width: 200px
+        right: 20px
+        top: 85px
+        z-index: 999
+        padding: 20px 10px
+        background-color: #ffff
+        border: 0
+        border-radius: 5px
+        box-shadow: 0 0 1px 2px #f3f3f3
+        & > ul
+            flex-direction: column
+            & > .login
+                display: block
+                border: 0
+                padding: 0
+                & > svg
+                    display: none
+            & > li
+                position: relative
+                margin-right: 30px
+                & > a
+                    color: #003a63
+.wrapper
+    .siteHeader
+        @include siteHeader()
+        .compartment
+            @include compartment()
+    .nav
+        @include nav()

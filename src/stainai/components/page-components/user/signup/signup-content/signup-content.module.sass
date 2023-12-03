@@ -1,0 +1,60 @@
+@mixin wrapper()
+    margin: 3rem  auto
+    max-width: 80%
+    padding: 0px 0
+    background-color: #fff
+    color: #29303d
+
+@mixin section()
+    height: 100%
+    display: flex
+    flex-direction: column
+    justify-content: center
+    padding: 2rem 3rem
+    
+@mixin heading()
+    display: flex
+    align-items: center
+    color: #29303d
+    font-size: 1.6rem
+    font-weight: 600
+    z-index: 5
+    & > img
+        margin-right: 20px
+
+@mixin blur()
+    color: #29303d
+    font-size: 1.2rem
+    padding-top: 20px
+
+@mixin button()
+    display: flex
+    // justify-content: flex-end
+    padding-top: 100px
+    & > a
+        z-index: 10
+        border-radius: 40px
+        border: 0
+        cursor: pointer
+        font-size: 0.9rem
+        font-weight: 600
+        outline: 0
+        text-align: center
+        text-transform: uppercase
+        white-space: nowrap
+        background: #17b5b7
+        padding: 10px 30px
+        color: #fff
+        &:hover
+          background: #156b6c
+          
+.wrapper
+    @include wrapper()
+    & > .section
+        @include section()
+        & > .heading
+            @include heading()
+        & > .blur
+            @include blur()
+        & > .button
+            @include button()

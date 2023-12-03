@@ -1,0 +1,160 @@
+@mixin wrapper()
+    background-color: #f4f4f4
+    min-height: 100vh
+    widows: 100vw
+    color: #000
+    font-weight: 600
+
+@mixin usernav()
+    display: flex
+    justify-content: flex-end
+    padding: 10px
+    font-size: 1.2rem
+    cursor: pointer
+    border-bottom: 2px solid #959595
+    &:hover
+        color: #7b7a7a
+
+@mixin signin()
+    margin: auto
+    // width: 50%
+    display: flex
+    flex-direction: column
+    align-items: center
+    // @media screen and (max-width: 890px)
+    //     width: 100%
+    //     max-width: 50%
+    //     margin: 0 auto
+    //     @media screen and (max-width: 1024px)
+    //         max-width: 65%
+    //     @media screen and (max-width: 890px)
+    //         max-width: 80%
+    & > form
+        max-width: 450px
+        width: 85%
+        margin: 0 auto
+        p
+            color: #bf1650
+        p::before
+            display: inline
+            content: "⚠ "
+        input
+            display: block
+            box-sizing: border-box
+            width: 100%
+            border-radius: 4px
+            border: 1px solid #171b2c
+            padding: 10px 15px
+            margin-bottom: 10px
+            font-size: 14px
+
+        button[type="submit"],
+        input[type="submit"]
+            background: #ec5990
+            color: white
+            text-transform: uppercase
+            border: none
+            margin-top: 40px
+            padding: 20px
+            font-size: 16px
+            font-weight: 100
+            letter-spacing: 6px
+            text-align: center
+        button[type="submit"]:hover,
+        input[type="submit"]:hover
+            background: #bf1650
+        button[type="submit"]:active,
+        input[type="button"]:active,
+        input[type="submit"]:active
+            transition: 0.3s all
+            transform: translateY(3px)
+            border: 1px solid transparent
+            opacity: 0.8
+        input:disabled
+            opacity: 0.4
+        input[type="button"]:hover
+            transition: 0.3s all
+        button[type="submit"],
+        input[type="button"],
+        input[type="submit"]
+            -webkit-appearance: none
+
+@mixin logo()
+    width: 250px
+    height: 250px
+    display: flex
+    justify-content: center
+    align-items: center
+    font-size: 2rem
+    font-weight: 500
+    margin-top: 20px
+
+@mixin title()
+    font-size: 2rem
+    font-weight: 600
+
+@mixin subtitle()
+    font-size: 1.3rem
+    font-weight: 400
+    padding: 20px 0
+
+@mixin morstainid()
+    position: relative
+    & > svg
+        position: absolute
+        right: 10px
+        top: 10px
+        color: gray
+        margin-left: 10px
+        border-radius: 50%
+        background: #f4f4f4
+        width: 30px
+        height: 30px
+        padding: 5px
+        border: 2px solid gray
+
+@mixin button()
+    padding-top: 30px
+    z-index: 10
+    border-radius: 40px
+    border: 0
+    cursor: pointer
+    font-size: 0.9rem
+    font-weight: 600
+    outline: 0
+    text-align: center
+    text-transform: uppercase
+    white-space: nowrap
+    background: #17b5b7
+    padding: 10px 30px
+    color: #fff
+    &:hover
+        background: #156b6c
+
+@mixin note()
+    color: #156b6c
+    & > a 
+        color: #17b5b7
+
+
+.wrapper
+    @include wrapper()
+    & > .usernav
+        @include usernav()
+    & > .signin
+        @include signin()
+        & > .logo
+            @include logo()
+        & > .title
+            @include title()
+        & > .subtitle
+            @include subtitle()
+        & > .note
+            @include note()
+
+@mixin header()
+    position: relative
+    background-color: #0c0f18
+
+.header
+    @include header()

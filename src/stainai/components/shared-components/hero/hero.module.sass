@@ -1,0 +1,75 @@
+@mixin wrapper()
+    margin-left: 0px
+    margin-top: 0px
+    padding: 0 5%
+    width: 100%
+    height: auto
+    color: #fff
+    z-index: 999
+
+@mixin hero()
+    min-height: 817px
+    display: flex
+    flex-direction: column 
+    align-items: center
+
+@mixin compartment()
+    width: 100%
+    padding: 1rem
+    .heroContent
+        padding: 1.5rem 0
+        z-index: 5
+        & > h1
+            margin-bottom: 0
+            font-size: 3rem
+            font-weight: 700
+            line-height: 1.5
+            max-width: 40rem
+            color: #9de4fc
+        & > h2
+            margin-bottom: 0
+            font-size: 2rem
+            font-weight: 600
+            line-height: 1.5
+            max-width: 40rem
+            color: #feb7fe
+        & > .blur
+            padding-top: 60px
+            font-size: 1.8rem
+            font-weight: 400
+            line-height: 1.5
+            color: #fff
+            // float: right
+        @media screen and (max-width: 890px)
+            padding: 2rem
+            & > h1
+                font-size: 2rem
+            &> h2
+                font-size: 1.5rem
+            & > .blur
+                font-size: 1.2rem
+                padding-top: 40px
+
+@mixin learnmore()
+    min-height: 300px
+    display: flex
+    align-items: flex-end                                                                      
+    & > .button
+        border: 1px solid #fff
+        cursor: pointer
+        font-size: 1rem
+        font-weight: 600
+        outline: 0
+        background: #101820
+        padding: 5px 40px
+        color: #fff
+        margin-top: 20px
+
+.wrapper
+    @include wrapper()
+    .hero
+        @include hero()
+        & > .compartment
+            @include compartment()
+        & > .learnmore
+            @include learnmore()

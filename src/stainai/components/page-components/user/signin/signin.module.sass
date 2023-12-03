@@ -1,0 +1,203 @@
+@mixin wrapper()
+    background-color: #f4f4f4
+    min-height: 88vh
+    width: 100vw
+    color: #000
+    font-weight: 600
+
+@mixin usernav()
+    display: flex
+    justify-content: flex-end
+    padding: 10px
+    font-size: 1.2rem
+    font-weight: 600
+    cursor: pointer
+    // border-bottom: 2px solid #959595
+    color: #156b6c
+    &>a
+        margin-right: 5%
+    &:hover
+        color: #17b5b7
+
+@mixin signin()
+    margin: auto
+    // width: 50%
+    width: 100%
+    display: flex
+    flex-direction: column
+    align-items: center
+    @media screen and (max-width: 890px)
+        width: 100%
+    & > form
+        max-width: 450px
+        width: 85%
+        margin: 0 auto
+        p
+            color: #bf1650
+        p::before
+            display: inline
+            content: "⚠ "
+        input
+            display: block
+            box-sizing: border-box
+            width: 100%
+            border-radius: 4px
+            border: 1px solid #171b2c
+            padding: 10px 15px
+            margin-bottom: 10px
+            font-size: 14px
+
+        button[type="submit"],
+        input[type="submit"]
+            background: #27b7b9
+            color: white
+            text-transform: uppercase
+            border: none
+            margin-top: 20px
+            padding: 20px
+            font-size: 16px
+            font-weight: 100
+            letter-spacing: 6px
+            text-align: center
+        button[type="submit"]:hover,
+        input[type="submit"]:hover
+            background: #156b6c
+        button[type="submit"]:active,
+        input[type="button"]:active,
+        input[type="submit"]:active
+            transition: 0.3s all
+            transform: translateY(3px)
+            border: 1px solid transparent
+            opacity: 0.8
+        input:disabled
+            opacity: 0.4
+        input[type="button"]:hover
+            transition: 0.3s all
+        button[type="submit"],
+        input[type="button"],
+        input[type="submit"]
+            -webkit-appearance: none
+
+@mixin logo()
+    width: 200px
+    height: 200px
+    display: flex
+    justify-content: center
+    align-items: center
+    font-size: 2rem
+    font-weight: 500
+    margin-top: 20px
+
+@mixin title()
+    font-size: 2rem
+    font-weight: 600
+
+@mixin subtitle()
+    font-size: 1.3rem
+    font-weight: 400
+    padding: 20px 0
+
+@mixin morstainid()
+    position: relative
+    & > svg
+        position: absolute
+        right: 10px
+        top: 10px
+        color: gray
+        margin-left: 10px
+        border-radius: 50%
+        background: #f4f4f4
+        width: 30px
+        height: 30px
+        padding: 5px
+        border: 2px solid gray
+
+@mixin input()
+    padding: 10px 20px
+    display: block
+    border: none
+    border: 2px solid #ccc
+    border-radius: 10px
+    width: 350px
+    font-size: 1.3rem
+    color: #7b7a7a
+    margin-bottom: 10px
+
+@mixin button()
+    display: flex
+    // justify-content: flex-end
+    padding-top: 20px
+    & > a
+        z-index: 10
+        border-radius: 40px
+        border: 0
+        cursor: pointer
+        font-size: 0.9rem
+        font-weight: 600
+        outline: 0
+        text-align: center
+        text-transform: uppercase
+        white-space: nowrap
+        background: #17b5b7
+        padding: 10px 30px
+        color: #fff
+        &:hover
+            background: #156b6c
+
+@mixin rememberme()
+    display: flex
+    align-items: center
+    font-size: 1.1rem
+    font-weight: 400
+    padding: 20px 0
+    & > .checkbox
+        width: 20px
+        height: 20px
+        margin-right: 10px
+        background-color: #7b7a7a
+
+@mixin forget()
+    color: #27b7b9
+    font-size: 1.1rem
+    font-weight: 300
+    cursor: pointer
+    padding-bottom: 0px
+
+@mixin error()
+    margin-top: 20px
+    color: #bf1650
+    &::before
+        display: inline
+        content: "⚠ "
+
+.wrapper
+    @include wrapper()
+    & > .usernav
+        @include usernav()
+    & > .signin
+        @include signin()
+        & > .logo
+            @include logo()
+        & > .title
+            @include title()
+        & > .subtitle
+            @include subtitle()
+        & > .morstainid
+            @include morstainid()
+            & > .input
+                @include input()
+        & > .button
+            @include button()
+        & > .rememberme
+            @include rememberme()
+        & > .forget
+            @include forget()
+        & > .error
+            @include error()
+
+@mixin header()
+    position: relative
+    background-color: #0c0f18
+
+.header
+    @include header()
