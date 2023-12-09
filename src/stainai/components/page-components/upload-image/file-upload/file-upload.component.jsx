@@ -4,7 +4,7 @@ import classes from "./file-upload.module.sass";
 import { RiDeleteBin5Line } from "react-icons/ri";
 
 const KILO_BYTES_PER_BYTE = 1000;
-const DEFAULT_MAX_FILE_SIZE_IN_BYTES = 1000000000;
+const DEFAULT_MAX_FILE_SIZE_IN_BYTES = 1000000000000;
 
 const convertNestedObjectToArray = (nestedObj) =>
   Object.keys(nestedObj).map((key) => nestedObj[key]);
